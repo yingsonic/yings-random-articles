@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "yra",
+	"version": "${version}",
+	"name": "Ying's Random Articles",
+	"description": "Random things I've made when learning Minecraft modding!",
+	"authors": [
+		"yingsonic"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-v3",
+	"icon": "assets/yra/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yingsonic.yra.RandomArticles"
+		],
+		"client": [
+			"net.yingsonic.yra.RandomArticlesClient"
+		],
+		"fabric-datagen": [
+			"net.yingsonic.yra.RandomArticlesDataGenerator"
+		]
+	},
+	"mixins": [
+		"yra.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
