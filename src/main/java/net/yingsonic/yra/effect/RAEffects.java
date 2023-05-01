@@ -10,7 +10,7 @@ import net.yingsonic.yra.RandomArticles;
 
 public class RAEffects {
     public static StatusEffect HEALING = register(RAConstants.Effects.HEALING,
-            new HealingEffect(StatusEffectCategory.BENEFICIAL, 872530));
+            new HealingEffect(StatusEffectCategory.BENEFICIAL, 1));
 
     public static StatusEffect register(String name, StatusEffect effect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(RAConstants.MOD_ID, name), effect);

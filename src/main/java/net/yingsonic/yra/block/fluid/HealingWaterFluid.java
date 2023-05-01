@@ -1,5 +1,11 @@
 package net.yingsonic.yra.block.fluid;
 
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.*;
 import net.yingsonic.yra.block.RABlocks;
 import net.yingsonic.yra.item.RAItems;
 import net.minecraft.block.Block;
@@ -15,12 +21,26 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
+import org.jetbrains.annotations.Nullable;
 
 public abstract class HealingWaterFluid extends FlowableFluid {
+
+    @Override
+    @Nullable
+    public ParticleEffect getParticle() {
+        return ParticleTypes.DRIPPING_WATER;
+    }
+
+    @Override
+    public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
+        if (!state.isStill() && !state.get(FALLING).booleanValue()) {
+            if (random.nextInt(64) == 0) {
+                world.playSound((double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ() + 0.5, SoundEvents.BLOCK_WATER_AMBIENT, SoundCategory.BLOCKS, random.nextFloat() * 0.25f + 0.75f, random.nextFloat() + 0.5f, false);
+            }
+        } else if (random.nextInt(10) == 0) {
+            world.addParticle(ParticleTypes.UNDERWATER, (double)pos.getX() + random.nextDouble(), (double)pos.getY() + random.nextDouble(), (double)pos.getZ() + random.nextDouble(), 0.0, 0.0, 0.0);
+        }
+    }
 
     // Still and flowing setters, can be used separately
     public static class Still extends HealingWaterFluid {
@@ -66,7 +86,7 @@ public abstract class HealingWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean isInfinite(World world) {
-        return true;
+        return world.getGameRules().getBoolean(GameRules.WATER_SOURCE_CONVERSION);
     }
 
     @Override
@@ -92,7 +112,7 @@ public abstract class HealingWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return false;
+        return direction == Direction.DOWN && !fluid.isIn(FluidTags.WATER);
     }
 
     @Override

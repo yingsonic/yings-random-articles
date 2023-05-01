@@ -8,6 +8,7 @@ import net.yingsonic.yra.effect.RAEffects;
 import net.yingsonic.yra.item.RAItemGroup;
 import net.yingsonic.yra.item.RAItems;
 import net.fabricmc.api.ModInitializer;
+import net.yingsonic.yra.potion.RAPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +24,7 @@ public class RandomArticles implements ModInitializer {
         RABlocks.registerModBlocks();
         RAItems.registerModItems();
         RAEffects.registerEffects();
+        RAPotions.registerModPotions();
 
         LOGGER.info("YRA initialization complete. (Took {}ms.)", System.currentTimeMillis() - startInitTime);
     }

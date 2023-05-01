@@ -22,4 +22,8 @@ public interface RAConstants {
     public interface Effects {
         String HEALING = "healing";
     }
+
+    public interface Potions {
+        String HEALING_WATER_POTION = "healing_water_potion";
+    }
 }

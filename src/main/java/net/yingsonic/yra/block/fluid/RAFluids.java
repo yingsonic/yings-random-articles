@@ -7,13 +7,12 @@ import net.minecraft.item.Items;
 import net.yingsonic.yra.RAConstants;
 import net.yingsonic.yra.RandomArticles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
 import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.yingsonic.yra.block.HealingWaterBlock;
 
 public class RAFluids {
     public static final FlowableFluid HEALING_WATER = new HealingWaterFluid.Still();
