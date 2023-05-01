@@ -18,4 +18,8 @@ public interface RAConstants {
         String HEALING_WATER = "healing_water";
         String FLOWING_HEALING_WATER = "flowing_healing_water";
     }
+
+    public interface Effects {
+        String HEALING = "healing";
+    }
 }
