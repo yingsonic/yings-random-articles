@@ -5,7 +5,19 @@
     
     "block.yra.zirconium_ore": "Zirconium Ore",
     
+    "block.yra.desert_willow_log": "Desert Willow Log",
+    "block.yra.desert_willow_wood": "Desert Willow Wood",
+    "block.yra.stripped_desert_willow_log": "Stripped Desert Willow Log",
+    "block.yra.stripped_desert_willow_wood": "Stripped Desert Willow Wood",
+    "block.yra.desert_willow_planks": "Desert Willow Planks",
+    "block.yra.desert_willow_sapling": "Desert Willow Sapling",
+    "block.yra.desert_willow_leaves": "Desert Willow Leaves",
+    
     "effect.yra.healing": "Healing",
+    
+    "item.minecraft.potion.effect.healing_water_potion": "Healing Water Bottle",
+    "item.minecraft.splash_potion.effect.healing_water_potion": "Splash Healing Water Bottle",
+    "item.minecraft.lingering_potion.effect.healing_water_potion": "Lingering Healing Water Bottle",
     
     "itemgroup.yra_main": "Ying's Random Articles"
 }

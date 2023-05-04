@@ -20,7 +20,6 @@ public class HealingEffect extends StatusEffect {
                 entity.removeStatusEffect(effect.getEffectType());
             }
         }
-
         if (i < 60) {
             i++;
             return;
@@ -29,6 +28,7 @@ public class HealingEffect extends StatusEffect {
         if (entity.getHealth() < entity.getMaxHealth()) {
             entity.heal(1f);
         }
+
     }
 
     @Override

@@ -1,6 +1,5 @@
 package net.yingsonic.yra.potion;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.Potion;
@@ -10,11 +9,12 @@ import net.minecraft.util.Identifier;
 import net.yingsonic.yra.RAConstants;
 import net.yingsonic.yra.RandomArticles;
 import net.yingsonic.yra.effect.RAEffects;
-import net.yingsonic.yra.item.RAItemGroup;
+import net.yingsonic.yra.item.RAItemGroups;
 
 public class RAPotions {
 
-    public static Potion HEALING_WATER_POTION = register(RAConstants.Potions.HEALING_WATER_POTION, new Potion(new StatusEffectInstance(RAEffects.HEALING, 61, 0)), RAItemGroup.RA_MAIN);
+    public static Potion HEALING_WATER_POTION = register(RAConstants.Potions.HEALING_WATER_POTION,
+            new Potion(new StatusEffectInstance(RAEffects.HEALING, 64, 0)), RAItemGroups.RA_MAIN);
 
     private static Potion register(String name, Potion potion, ItemGroup group) {
         return Registry.register(Registries.POTION, new Identifier(RAConstants.MOD_ID, name), potion);

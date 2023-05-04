@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "yra:block/desert_willow_log",
+    "side": "yra:block/desert_willow_log"
+  }
+}

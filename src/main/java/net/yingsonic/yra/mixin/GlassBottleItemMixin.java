@@ -56,18 +56,4 @@ public abstract class GlassBottleItemMixin extends Item {
 
 	}
 
-//	@ModifyVariable(method = "use", at = @At("TAIL"), argsOnly = true, ordinal = 0)
-//	private GlassBottleItem healingWater (GlassBottleItem value) {
-//		BlockHitResult hitResult = GlassBottleItem.raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
-//		return null;
-//	}
-
-//	@Inject(method = "use", at = @At(value = "INVOKE", target = ""), slice = @Slice(
-//			from = @At(value = "INVOKE", target = ""),
-//			to = @At(value = "INVOKE", target = "")), cancellable = true)
-//	private void healingWaterBottle(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-//		cir.setReturnValue(TypedActionResult.success(this.fill(new ItemStack(RAFluids.HEALING_WATER_BUCKET), user, PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER)), world.isClient()));
-//
-//	}
-
 }

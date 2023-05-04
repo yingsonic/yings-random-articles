@@ -1,11 +1,8 @@
 package net.yingsonic.yra;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.world.World;
 import net.yingsonic.yra.block.RABlocks;
 import net.yingsonic.yra.block.fluid.RAFluids;
 import net.yingsonic.yra.effect.RAEffects;
-import net.yingsonic.yra.item.RAItemGroup;
+import net.yingsonic.yra.item.RAItemGroups;
 import net.yingsonic.yra.item.RAItems;
 import net.fabricmc.api.ModInitializer;
 import net.yingsonic.yra.potion.RAPotions;
@@ -19,11 +16,11 @@ public class RandomArticles implements ModInitializer {
         long startInitTime = System.currentTimeMillis();
         LOGGER.info("Initializing YRA.");
 
-        RAItemGroup.registerItemGroups();
+        RAItemGroups.registerModItemGroups();
         RAFluids.registerModFluids();
         RABlocks.registerModBlocks();
         RAItems.registerModItems();
-        RAEffects.registerEffects();
+        RAEffects.registerModEffects();
         RAPotions.registerModPotions();
 
         LOGGER.info("YRA initialization complete. (Took {}ms.)", System.currentTimeMillis() - startInitTime);

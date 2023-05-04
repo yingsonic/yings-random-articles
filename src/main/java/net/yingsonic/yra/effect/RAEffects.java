@@ -10,13 +10,13 @@ import net.yingsonic.yra.RandomArticles;
 
 public class RAEffects {
     public static StatusEffect HEALING = register(RAConstants.Effects.HEALING,
-            new HealingEffect(StatusEffectCategory.BENEFICIAL, 1));
+            new HealingEffect(StatusEffectCategory.BENEFICIAL, 899999999));
 
     public static StatusEffect register(String name, StatusEffect effect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(RAConstants.MOD_ID, name), effect);
     }
 
-    public static void registerEffects() {
+    public static void registerModEffects() {
         RandomArticles.LOGGER.info("Registering Effects for " + RAConstants.MOD_ID);
     }
 

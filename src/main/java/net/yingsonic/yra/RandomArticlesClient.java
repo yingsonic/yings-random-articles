@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
+import net.yingsonic.yra.block.RABlocks;
 import net.yingsonic.yra.block.fluid.RAFluids;
 
 public class RandomArticlesClient implements ClientModInitializer {
@@ -20,5 +21,7 @@ public class RandomArticlesClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 RAFluids.HEALING_WATER, RAFluids.FLOWING_HEALING_WATER);
+        BlockRenderLayerMap.INSTANCE.putBlock(RABlocks.DESERT_WILLOW_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RABlocks.DESERT_WILLOW_SAPLING, RenderLayer.getCutout());
     }
 }

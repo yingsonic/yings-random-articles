@@ -5,10 +5,8 @@ import net.yingsonic.yra.RandomArticles;
 import net.yingsonic.yra.block.fluid.RAFluids;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -26,9 +24,9 @@ public class RAItems {
     }
 
     public static void addItemsToItemGroup() {
-        addToItemGroup(RAItemGroup.RA_MAIN, RAW_ZIRCONIUM);
-        addToItemGroup(RAItemGroup.RA_MAIN, ZIRCONIUM_INGOT);
-        addToItemGroup(RAItemGroup.RA_MAIN, RAFluids.HEALING_WATER_BUCKET);
+        addToItemGroup(RAItemGroups.RA_MAIN, RAW_ZIRCONIUM);
+        addToItemGroup(RAItemGroups.RA_MAIN, ZIRCONIUM_INGOT);
+        addToItemGroup(RAItemGroups.RA_MAIN, RAFluids.HEALING_WATER_BUCKET);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
